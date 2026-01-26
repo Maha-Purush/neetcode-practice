@@ -8,8 +8,4 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[int]
         """
-        n = len(nums)
-        nums = set(nums)
-        test = set(range(1, n + 1 ))
-        missing = list(test - nums)
-        return missing
+        return list(set(range(1, len(nums) + 1 )) - set(nums))
